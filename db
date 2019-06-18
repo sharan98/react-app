@@ -1,0 +1,8 @@
+collection name: syllabus
+{
+    department: String,
+    course: String,
+    courseCode: String,
+    semester: Number,
+    syllabus: String (or pdf, if possible)
+}

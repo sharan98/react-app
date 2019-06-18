@@ -1,0 +1,17 @@
+\
+  department\
+    course\
+      syllabus
+
+department:
+  CSE
+    course:
+      IOT
+        syllabus:
+          Unit 1
+          Unit 2
+      PY
+      OOMD
+  ISE
+  MECH
+

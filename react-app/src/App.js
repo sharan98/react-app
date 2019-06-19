@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import Axios from 'axios';
+import Department from './components/department/Department'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    names: []
+  }
+  componentDidMount() {
+    Axios.get("https://gublze4aq4.execute-api.us-east-2.amazonaws.com/test/department")
+    .then(res => {
+      console.log('axios.get.then')
+      console.log(res)
+      this.setState({
+        names: res.data.body
+      })
+    })
+  }
+  render() {
+    var depts = [];
+    this.state.names.forEach(name => {
+      depts.push(<Department name={name} />)
+    })
+    return (
+      <div className="App">
+        {/* <Department name={this.state.names}/> */}
+        {depts}
+      </div>
+    );
+  }
 }
 
 export default App;

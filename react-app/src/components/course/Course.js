@@ -1,16 +1,16 @@
 import React from 'react';
-import './Department.css'
+import './course.css'
 
-class Department extends React.Component {
+class Course extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: props.name
+            name: props.courseCode
         }
     }
     render() {
         return(
-            <div className="department">
+            <div className="course">
                 {/* <button >{this.state.name}</button> */}
                 {this.state.name} <br />
             </div>
@@ -18,4 +18,4 @@ class Department extends React.Component {
     }
 }
 
-export default Department;
+export default Course;

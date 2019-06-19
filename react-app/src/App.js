@@ -3,12 +3,14 @@ import Axios from 'axios';
 import Department from './components/department/Department'
 import './App.css';
 
+const API = "https://gublze4aq4.execute-api.us-east-2.amazonaws.com/test";
+
 class App extends React.Component {
   state = {
     names: []
   }
   componentDidMount() {
-    Axios.get("https://gublze4aq4.execute-api.us-east-2.amazonaws.com/test/department")
+    Axios.get(API + "/department")
     .then(res => {
       console.log('axios.get.then')
       console.log(res)

@@ -24,17 +24,32 @@ class Syllabus extends React.Component {
             syllabus: res.data.body
           })
         })
+        .catch(err => {
+            console.log('axios.get.err');
+            console.log(err);
+        })
     }
     
     displaySyllabus() {
         var courses = [];
         console.log('==>displaySyllabus');
         console.log(this.state.syllabus);
-        var syllabus = JSON.stringify(this.state.syllabus);
-        return <p key={uuid.v1()}>{syllabus}</p>
+        var syllabus = this.state.syllabus;
+        if (syllabus === '') {
+            return <div></div>
+        }
+        console.log(syllabus);
+        console.log(syllabus[0].semester);
+        return <div key={uuid.v1()}>
+            <p><em>Course</em>: {syllabus[0].course}</p>
+            <p><em>Semester</em>: {syllabus[0].semester}</p>
+            <p><em>Syllabus</em>: {syllabus[0].syllabus}</p>
+        </div>
     }
 
     render() {
+        console.log("==> courseCode prop" + this.props.courseCode);
+        
         return(
             <div className="syllabus">
                 <h1>{this.props.courseCode}</h1>

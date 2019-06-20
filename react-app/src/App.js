@@ -19,6 +19,7 @@ export default class App extends React.Component {
   }
   render() {
     return (
+      <div className="app">
       <Router>
         {/* <Department /> */}
         <Route exact path="/" render={() => 
@@ -34,6 +35,7 @@ export default class App extends React.Component {
         }
         />
       </Router>
+      </div>
     )
   }
 }

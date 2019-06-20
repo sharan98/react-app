@@ -8,6 +8,14 @@
   pointer-events: none;
 }
 
+.app{
+  background-color: rgb(20, 84, 114);
+  height: 10cm;
+  width: 20cm;
+  margin-left: 10cm;
+  margin-top: 5cm;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

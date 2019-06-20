@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import uuid from 'uuid';
 import './Department.css'
 

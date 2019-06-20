@@ -34,7 +34,7 @@ class Department extends React.Component {
         console.log(this.state.deptNames);
         
         this.state.deptNames.forEach(element => {
-          depts.push(<p key={uuid.v1()}><Link to={`/dept/${element}`}>{element}</Link></p>)
+          depts.push(<p key={uuid.v1()}><Link to={`/dept/${element}`} className="link">{element}</Link></p>)
         });
         return depts;
     }

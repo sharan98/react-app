@@ -1,5 +1,12 @@
 .department {
     margin: 10px;
-    color: yellowgreen;
+    color: white;
     font-size: 2em;
+    
+    text-align: center;
+}
+
+.link:hover{
+    color:cyan;
+    
 }

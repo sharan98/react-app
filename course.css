@@ -1,0 +1,17 @@
+.course{
+    text-align: center;
+    color: white;
+    
+}
+
+.para:hover{
+    color: white;
+}
+
+.link:hover{
+    color: rgb(235, 109, 25);
+}
+
+.link{
+    color: lightyellow;
+}

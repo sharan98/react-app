@@ -33,7 +33,7 @@ class Course extends React.Component {
         var department = this.props.dept;
         
         this.state.courseCodes.forEach(element => {
-          courses.push(<p key={uuid.v1()}><Link to={`/${department}/course/${element.courseCode}`}>{element.courseCode}</Link></p>)
+          courses.push(<p key={uuid.v1()} ><Link to={`/${department}/course/${element.courseCode}`} className="link">{element.courseCode}</Link></p>)
         });
         return courses;
     }
